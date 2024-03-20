@@ -1,0 +1,61 @@
+body{
+    background-color: rgb(117, 117, 233);
+}
+.header{
+    border: px solid black;
+    box-shadow: 10px 10px 5px lightblue;
+    border-radius: 8px;
+}
+
+.main {
+    background-color: rgb(243, 236, 227);
+   display: flex;
+   gap: 10px;
+ 
+    
+    
+}
+
+.tickets {
+    box-shadow: 5px 5px 10px rgb(82, 81, 81);
+    background-color: rgba(252, 232, 232, 0.719);
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px; /* Optional: Add padding to the container */
+    margin: 10px 10px ; /* Optional: Add margin around the container */
+}
+
+
+.container {
+    
+    
+   
+    margin-right: 20px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.733);
+    
+}
+
+.btn{
+    box-shadow: 5px 5px 5px rgb(82, 81, 81);
+}
+
+
+
+.header {
+    background-color: antiquewhite;
+}
+
+.assign-container {
+    max-height: 500px; 
+    min-width: 300px;
+    overflow-y: auto;   
+    box-shadow: 5px 5px 10px rgb(82, 81, 81);
+    background-color: rgba(252, 232, 232, 0.719);
+    border: 1px solid black;
+    border-radius: 8px;    /* Add vertical scrollbar when necessary */
+}
+
+
+
+
