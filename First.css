@@ -2,10 +2,29 @@ body{
     background-color: rgb(117, 117, 233);
 }
 .header{
-    border: px solid black;
+    border: 1px solid black;
     box-shadow: 10px 10px 5px lightblue;
     border-radius: 8px;
+    
+   
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    top: 0;
+    margin: 5px;
+    background-color: rgba(27, 19, 19, 0.171);
 }
+
+.header h2{ 
+    margin: 5px;
+    padding: 5px;
+    
+}
+.btn.btn-dark{
+    margin: 8px;
+}
+
+
 
 .main {
     background-color: rgb(243, 236, 227);
@@ -27,9 +46,6 @@ body{
 
 
 .container {
-    
-    
-   
     margin-right: 20px;
     margin-bottom: 10px;
     background-color: rgba(255, 255, 255, 0.733);
@@ -38,13 +54,18 @@ body{
 
 .btn{
     box-shadow: 5px 5px 5px rgb(82, 81, 81);
+   
+    
 }
-
 
 
 .header {
     background-color: antiquewhite;
 }
+.bi-star {
+    display: inline !important;
+}
+
 
 .assign-container {
     max-height: 500px; 
@@ -54,7 +75,70 @@ body{
     background-color: rgba(252, 232, 232, 0.719);
     border: 1px solid black;
     border-radius: 8px;    /* Add vertical scrollbar when necessary */
+    padding: 10px;
 }
+
+
+#overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    background-color: rgb(204, 198, 198);
+    display: none;
+    z-index: 9999; /* Ensure it's on top of other content */
+    border-radius: 10px;
+    
+    z-index: 9999; /* Ensure the overlay is on top of other elements */
+    overflow-y: auto; /* Allow overlay to scroll if content overflows */
+    
+}
+
+/* For add Tickets */
+.overlay{
+    
+}
+.form{
+    margin: 10px;
+    padding: 1px;
+}
+.form-group.row label {
+    white-space: nowrap; /* Prevents "PM" from breaking */
+}
+
+.form-group.row:last-child {
+    margin-bottom: 1rem; /* Add margin to separate from the next form */
+}
+
+/* Adjust label width and alignment */
+.col-form-label {
+    text-align: right; /* Align labels to the right */
+    white-space: nowrap; /* Prevent labels from wrapping */
+}
+
+/* Adjust input width */
+.form-control {
+    width: calc(100% - 2rem); /* Adjust input width to fit within the container */
+}
+
+
+.overlay_header{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    border-bottom: 1px solid black;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5); /* Add a shadow to the bottom */
+    padding: 6px;
+}
+.oh_left{
+    display: flex;
+}
+.overlay_header span{
+    font-size: 30px;
+}
+
 
 
 
