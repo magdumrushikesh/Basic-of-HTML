@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .nav-left a.active {
+  color: red; /* Change this to the desired color */
+}
+
+  </style>
+</head>
+<body>
+  <div class="nav-left">
+    <a onclick="showTable('action')" id="actionLink">Action 
+      <span class="badge badge-pill badge-success">0</span>
+    </a>
+    <a onclick="showTable('guide')" id="guideLink">Guide
+      <span class="badge badge-pill badge-success">0</span>
+    </a>
+    <a onclick="showTable('files')" id="filesLink">Files
+      <span class="badge badge-pill badge-success">0</span>
+    </a> 
+    <a onclick="showTable('plannedwo')" id="plannedwoLink">Planned W/O
+      <span class="badge badge-pill badge-success">0</span>
+    </a>
+    <a onclick="showTable('workpermit')" id="workpermitLink">Work Permit
+      <span class="badge badge-pill badge-success">0</span>
+    </a>
+  </div>
+  <script>
+    function showTable(id) {
+  // Your existing logic to show the table
+
+  // Remove active class from all links
+  document.querySelectorAll('.nav-left a').forEach(link => {
+    link.classList.remove('active');
+  });
+
+  // Add active class to the clicked link
+  document.getElementById(id + 'Link').classList.add('active');
+}
+
+  </script>
+</body>
+</html>

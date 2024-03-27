@@ -1,9 +1,9 @@
-body{
-    background-color: rgb(117, 117, 233);
-}
+
 .header{
     border: 1px solid black;
-    box-shadow: 10px 10px 5px lightblue;
+    box-shadow: 
+    2px 0px 6px hsla(0.3, 0.3%, .3%, 0.3), 0 5px 15px hsla(0, 0%, 0%, 0.1) !important;;
+    border-radius: 10px;
     border-radius: 8px;
     
    
@@ -27,7 +27,7 @@ body{
 
 
 .main {
-    background-color: rgb(243, 236, 227);
+    
    display: flex;
    gap: 10px;
  
@@ -36,7 +36,9 @@ body{
 }
 
 .tickets {
-    box-shadow: 5px 5px 10px rgb(82, 81, 81);
+    box-shadow: 
+    2px 0px 6px hsla(0.3, 0.3%, .3%, 0.3), 0 5px 15px hsla(0, 0%, 0%, 0.1) !important;;
+    border-radius: 10px;
     background-color: rgba(252, 232, 232, 0.719);
     border: 1px solid black;
     border-radius: 8px;
@@ -53,10 +55,11 @@ body{
 }
 
 .btn{
-    box-shadow: 5px 5px 5px rgb(82, 81, 81);
-   
+    
+   margin: 10px 0px 10px 10px;
     
 }
+
 
 
 .header {
@@ -71,75 +74,241 @@ body{
     max-height: 500px; 
     min-width: 300px;
     overflow-y: auto;   
-    box-shadow: 5px 5px 10px rgb(82, 81, 81);
+    box-shadow: 
+    2px 0px 6px hsla(0.3, 0.3%, .3%, 0.3), 0 5px 15px hsla(0, 0%, 0%, 0.1) !important;;
+    border-radius: 10px;
     background-color: rgba(252, 232, 232, 0.719);
     border: 1px solid black;
     border-radius: 8px;    /* Add vertical scrollbar when necessary */
-    padding: 10px;
+    padding: 0px;
 }
-
-
-#overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    height: 70%;
-    background-color: rgb(204, 198, 198);
-    display: none;
-    z-index: 9999; /* Ensure it's on top of other content */
-    border-radius: 10px;
-    
-    z-index: 9999; /* Ensure the overlay is on top of other elements */
-    overflow-y: auto; /* Allow overlay to scroll if content overflows */
-    
-}
-
-/* For add Tickets */
-.overlay{
-    
-}
-.form{
-    margin: 10px;
-    padding: 1px;
-}
-.form-group.row label {
-    white-space: nowrap; /* Prevents "PM" from breaking */
-}
-
-.form-group.row:last-child {
-    margin-bottom: 1rem; /* Add margin to separate from the next form */
-}
-
-/* Adjust label width and alignment */
-.col-form-label {
-    text-align: right; /* Align labels to the right */
-    white-space: nowrap; /* Prevent labels from wrapping */
-}
-
-/* Adjust input width */
-.form-control {
-    width: calc(100% - 2rem); /* Adjust input width to fit within the container */
-}
-
 
 .overlay_header{
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    margin: 5px;
-    border-bottom: 1px solid black;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5); /* Add a shadow to the bottom */
-    padding: 6px;
+    margin: 1px;
+    gap: 0px;
+    border-bottom: 1px solid black ;
+    padding: 7px;
+    background-color: rgba(212, 210, 210, 0.952);
+    border-radius: 5px;
 }
-.oh_left{
+
+
+#modal-dialog1{
+    align-items: center;
+}
+
+#modal-content1{
+    
+        height: auto;
+        min-width: 1100px;
+        background-color: rgb(255, 255, 255);
+        top: 50px !important;
+        margin-left: -350px;
+        
+}
+#model-body1{
+    padding: 20px;
+    margin: 10px;
+    align-content: center;
+    max-height: 600px;
+}
+#model-header1{
+    padding: 0px;
+    display: block;
+    
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2); 
+      
+}
+.modal.fade{
+    
+    border-radius: 10px;
+}
+
+.modal-content{
+    background-color: #ffffffee;
+}
+
+
+
+.form-control{
+    margin: 5px;
+    border: 1px black;
+    margin: 4px;
+}
+.form-label{
+    font-weight: 500;
+}
+
+col-form-label{
+    margin-right: 5px;
+}
+
+.col-sm-2.col-form-label{
     display: flex;
 }
-.overlay_header span{
-    font-size: 30px;
+
+#form {
+    background-color: #000;
+    padding: 10px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    
+}
+
+input , textarea
+{
+  box-shadow:inset 0 0 5px 5px #e1e3e4;
+  background: #fff;
 }
 
 
+/* -----------------For View Ticket */
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-header >span{
+    color: red;
+    font-weight: 600;
+}
+.list-group-item > span{
+    color: rgb(110, 108, 108);
+}
+
+.card.border-dark.mb-3 {
+    height: calc(100vh - 15rem);
+    
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 98.5%;
+    /* padding: 10px; */
+    border: 0px;
+    border-radius: 10px;
+
+    box-shadow: 
+   2px 0px 6px hsla(0.3, 0.3%, .3%, 0.3), 0 5px 15px hsla(0, 0%, 0%, 0.1) !important;;
+}
+
+.card .card-header{
+        padding: 5px 10px !important;
+        margin: 0px 5px;
+        border-radius: 10px;
+        box-shadow: 2px 0px 6px hsla(0.3, 0.3%, .3%, 0.3), 0 5px 15px hsla(0, 0%, 0%, 0.1) !important;
+}
+
+.modal-header button{
+    font-size: 15px;
+    border: 0px;
+}
+
+.modal-header button:hover{
+    cursor: pointer;
+}
+#modal-header-view{
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+   
+}
+.card1{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    max-height: 2.5rem;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid rgb(185, 172, 172);
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+    justify-content: space-between;
+   box-shadow: 
+   2px 0px 6px hsla(0.3, 0.3%, .3%, 0.3), 0 5px 15px hsla(0, 0%, 0%, 0.1) !important;;
+}
+
+.nav-left{
+  
+    
+    justify-content: flex-start;
+    gap: 2rem;
+   
+}
+.nav-right{
+    display: flex;
+    
+}
 
 
+.nav-left a:hover{
+    cursor: pointer;
+    
+}
 
+
+/* For allignment of table and navbar */
+.container {
+    display: flex;
+    gap: 1.5rem;
+    
+  }
+  
+  .left {
+    
+    
+  }
+  
+  .right {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    margin: 0 0 0 -20px;
+    border: 1px solid gray;
+    border-radius: 10px;
+
+    box-shadow: 
+    2px 0px 6px hsla(0.3, 0.3%, .3%, 0.3), 0 5px 15px hsla(0, 0%, 0%, 0.1) !important;;
+  }
+  
+  .right div {
+    
+    margin-bottom: 5px;
+    
+  }
+  .modal-body{
+    padding: 0rem;
+  }
+  .table .table{
+    
+    box-shadow: 
+    2px 0px 6px hsla(0.3, 0.3%, .3%, 0.3), 0 5px 15px hsla(0, 0%, 0%, 0.1) !important;;
+    border-radius: 10px;
+  }
+  .nav-left a.active {
+    background-color: rgb(216, 207, 207);
+  }
+  .nav-left a{
+    padding: 5px 5px 10px 10px;
+    border-radius: 10px;
+  }
+  
+  th{
+    width: 20%;
+  }
+  
+ 
+  
+ 
+
+
+  
