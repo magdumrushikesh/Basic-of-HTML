@@ -5,43 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    .nav-left a.active {
-  color: red; /* Change this to the desired color */
-}
-
+            #container {
+            border: 1px solid #ccc; overflow: scroll; width: 200px;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+        #content {
+            background-color: #ccc; width: 250px;
+            white-space: nowrap;
+        }
   </style>
 </head>
 <body>
-  <div class="nav-left">
-    <a onclick="showTable('action')" id="actionLink">Action 
-      <span class="badge badge-pill badge-success">0</span>
-    </a>
-    <a onclick="showTable('guide')" id="guideLink">Guide
-      <span class="badge badge-pill badge-success">0</span>
-    </a>
-    <a onclick="showTable('files')" id="filesLink">Files
-      <span class="badge badge-pill badge-success">0</span>
-    </a> 
-    <a onclick="showTable('plannedwo')" id="plannedwoLink">Planned W/O
-      <span class="badge badge-pill badge-success">0</span>
-    </a>
-    <a onclick="showTable('workpermit')" id="workpermitLink">Work Permit
-      <span class="badge badge-pill badge-success">0</span>
-    </a>
-  </div>
-  <script>
-    function showTable(id) {
-  // Your existing logic to show the table
+  <div id="container">
+    <div id="content">Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</div>
+</div>
+<button id="slideBack" type="button">Prev</button>
+<button id="slide" type="button">Next</button>
 
-  // Remove active class from all links
-  document.querySelectorAll('.nav-left a').forEach(link => {
-    link.classList.remove('active');
-  });
+<script>
+  
+  var button = document.getElementById('slide');
+button.onclick = function () {
+    var container = document.getElementById('container');
+    sideScroll(container,'right',25,100,10);
+};
 
-  // Add active class to the clicked link
-  document.getElementById(id + 'Link').classList.add('active');
+var back = document.getElementById('slideBack');
+back.onclick = function () {
+    var container = document.getElementById('container');
+    sideScroll(container,'left',25,100,10);
+};
+
+function sideScroll(element,direction,speed,distance,step){
+    scrollAmount = 0;
+    var slideTimer = setInterval(function(){
+        if(direction == 'left'){
+            element.scrollLeft -= step;
+        } else {
+            element.scrollLeft += step;
+        }
+        scrollAmount += step;
+        if(scrollAmount >= distance){
+            window.clearInterval(slideTimer);
+        }
+    }, speed);
 }
 
-  </script>
+</script>
 </body>
 </html>

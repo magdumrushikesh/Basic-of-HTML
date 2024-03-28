@@ -270,7 +270,11 @@
 
 
                   <div class="nav-bar">
-                        <div class="nav-left">
+                        <i class="fa fa-arrow-left" aria-hidden="true"  id="slideBack" style="color:  rgb(97, 252, 97);"></i>
+    
+                        <div class="nav-left" id="container">
+                            <div id="content">
+
                                 <a  onclick="showTable('action')" id="actionLink">Action 
                                     <span class="badge badge-pill badge-success">0</span>
                                 </a>
@@ -286,7 +290,27 @@
                                 <a onclick="showTable('workpermit')" id="workpermitLink">Work Permit
                                     <span class="badge badge-pill badge-success">0</span>
                                 </a>
+
+                                <a  onclick="showTable('action')" id="actionLink">Action 
+                                    <span class="badge badge-pill badge-success">0</span>
+                                </a>
+                                <a onclick="showTable('guide')" id="guideLink">Guide
+                                    <span class="badge badge-pill badge-success">0</span>
+                                </a>
+                                <a onclick="showTable('files')" id="filesLink">Files
+                                    <span class="badge badge-pill badge-success">0</span>
+                                </a> 
+                                <a onclick="showTable('plannedwo')" id="plannedwoLink">Planned W/O
+                                    <span class="badge badge-pill badge-success">0</span>
+                                </a>
+                                <a onclick="showTable('workpermit')" id="workpermitLink">Work Permit
+                                    <span class="badge badge-pill badge-success">0</span>
+                                </a>
+                            </div>
+                                
                         </div>
+                            <i class="fa fa-arrow-right" aria-hidden="true" id="slide" style="color: rgb(97, 252, 97);"></i>
+                       
                         <div class="nav-right">
                             <button type="button" class="btn btn-secondary btn-sm">Add</button>
                         </div>
@@ -814,6 +838,36 @@
         document.getElementById(tableId + 'Link').classList.add('active');
       
         
+        }
+
+
+        // code for slide navbar
+
+        var button = document.getElementById('slide');
+        button.onclick = function () {
+            var container = document.getElementById('container');
+            sideScroll(container,'right',25,100,10);
+        };
+
+        var back = document.getElementById('slideBack');
+        back.onclick = function () {
+            var container = document.getElementById('container');
+            sideScroll(container,'left',25,100,10);
+        };
+
+        function sideScroll(element,direction,speed,distance,step){
+            scrollAmount = 0;
+            var slideTimer = setInterval(function(){
+                if(direction == 'left'){
+                    element.scrollLeft -= step;
+                } else {
+                    element.scrollLeft += step;
+                }
+                scrollAmount += step;
+                if(scrollAmount >= distance){
+                    window.clearInterval(slideTimer);
+                }
+            }, speed);
         }
 
 

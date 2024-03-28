@@ -74,8 +74,7 @@
     max-height: 500px; 
     min-width: 300px;
     overflow-y: auto;   
-    box-shadow: 
-    2px 0px 6px hsla(0.3, 0.3%, .3%, 0.3), 0 5px 15px hsla(0, 0%, 0%, 0.1) !important;;
+   
     border-radius: 10px;
     background-color: rgba(252, 232, 232, 0.719);
     border: 1px solid black;
@@ -196,7 +195,7 @@ input , textarea
 }
 
 .card .card-header{
-        padding: 5px 10px !important;
+        padding: 0px 10px !important;
         margin: 0px 5px;
         border-radius: 10px;
         box-shadow: 2px 0px 6px hsla(0.3, 0.3%, .3%, 0.3), 0 5px 15px hsla(0, 0%, 0%, 0.1) !important;
@@ -242,6 +241,8 @@ input , textarea
     
     justify-content: flex-start;
     gap: 2rem;
+    /*  */
+   
    
 }
 .nav-right{
@@ -305,7 +306,54 @@ input , textarea
   th{
     width: 20%;
   }
+
+  /*  */
+  /*  */
+  .navbar {
+    width: 600px; /* Fixed width for the navbar */
+    margin: 0 auto; /* Center the navbar horizontally */
+    padding: 10px 0; /* Add padding as needed */
+    background-color: #f8f9fa; /* Navbar background color */
+  }
   
+
+  
+  .nav-left a {
+    text-decoration: none; 
+    color: #333; 
+    padding: 5px 10px; 
+    
+  }
+  
+  .nav-left a:hover {
+    background-color: #e9ecef; 
+  }
+  
+  .badge {
+    margin-left: 2px; /* Add space between text and badge */
+  }
+
+  #content {
+    
+    white-space: nowrap;
+}
+
+#container {
+    overflow: scroll; width: 600px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+  
+
+.nav-bar  i:hover{
+    cursor: pointer;
+    background-color: #e9ecef; 
+
+}
+.nav-bar  i{
+    padding: 6px;
+    border-radius: 10px;
+}
  
   
  
