@@ -57,6 +57,7 @@
 .btn{
     
    margin: 10px 0px 10px 10px;
+   font-weight: 700;
     
 }
 
@@ -102,12 +103,20 @@
 #modal-content1{
     
         height: auto;
-        min-width: 1100px;
+        position: absolute;
+       
         background-color: rgb(255, 255, 255);
         top: 50px !important;
-        margin-left: -350px;
+        padding: 5px;
+        
         
 }
+.modal-content{
+    min-width: 1000px;
+    margin-left: -15rem;
+        margin-top: -1rem;
+}
+
 #model-body1{
     padding: 20px;
     margin: 10px;
@@ -129,6 +138,8 @@
 .modal-content{
     background-color: #ffffffee;
 }
+
+
 
 
 
@@ -186,6 +197,7 @@ input , textarea
     overflow-y: auto;
     overflow-x: hidden;
     width: 98.5%;
+    max-width: 15rem;
     /* padding: 10px; */
     border: 0px;
     border-radius: 10px;
@@ -223,15 +235,16 @@ input , textarea
 
 .nav-bar{
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     max-height: 2.5rem;
     align-items: center;
     padding: 10px;
     border: 1px solid rgb(185, 172, 172);
     border-radius: 10px;
-    max-width: 800px;
+   
     width: 100%;
-    justify-content: space-between;
+    
    box-shadow: 
    2px 0px 6px hsla(0.3, 0.3%, .3%, 0.3), 0 5px 15px hsla(0, 0%, 0%, 0.1) !important;;
 }
@@ -264,16 +277,13 @@ input , textarea
     
   }
   
-  .left {
-    
-    
-  }
+
   
   .right {
     display: flex;
     flex-direction: column;
     flex: 2;
-    margin: 0 0 0 -20px;
+   
     border: 1px solid gray;
     border-radius: 10px;
 
@@ -353,6 +363,90 @@ input , textarea
 .nav-bar  i{
     padding: 6px;
     border-radius: 10px;
+}
+
+#accordion{
+    display: none;
+}
+
+@media screen and (max-width:1100px){ 
+
+    .card1{
+        display: flex;
+        flex-direction: column;
+    }
+    .card.border-dark.mb-3{
+        max-width: 100%;
+    }
+    #accordion{
+        display: none;
+    }
+}
+
+
+
+/* Mobile */
+@media screen and (max-width: 800px) {
+    .card1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #t1{
+        display: none;
+    }
+    #accordion{
+        display: block;
+        padding: 5px;
+        
+    }
+
+    
+   .modal-content{
+    min-width: 50px;
+    margin: 0.1rem;
+    }
+    .nav-bar{
+        display: none;
+    }
+}
+
+
+/* For cards in tabele */
+.card .card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card .card-header .cright{
+    align-items: center;
+}
+.card .card-header {
+    font-weight: 700;
+}
+
+.actioncard{
+    width: 100%;
+    border: 1px solid rgb(163, 161, 161);
+    padding: 10px;
+    border-radius: 10px;
+    
+    box-shadow: 
+    2px 0px 6px hsla(0.3, 0.3%, .3%, 0.3), 0 5px 15px hsla(0, 0%, 0%, 0.1) !important;;
+    border-radius: 10px;
+}
+.actioncard .head{
+    font-weight: 700;
+    color: #3163ec;
+}
+.actioncard .body{
+    font-weight: 100;
+    color: #757981;
+}
+.card-body {
+
+    padding: 0.75rem;
 }
  
   
